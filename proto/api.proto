@@ -1,0 +1,170 @@
+syntax = "proto3";
+package solgateway;
+option go_package = "./solgateway";
+
+service solgateway {
+  //Common
+  rpc SendTransaction(SendTransactionRequest) returns (SendTransactionResponse);
+  //PumpFun
+  rpc SubscribePumpFunCreateStream(SubscribePumpFunCreateStreamRequest) returns (stream SubscribePumpFunCreateStreamResponse);
+  rpc SubscribePumpFunWithdrawStream(SubscribePumpFunWithdrawStreamRequest) returns (stream SubscribePumpFunWithdrawStreamResponse);
+  rpc SubscribePumpFunSwapStream(SubscribePumpFunSwapStreamRequest) returns (stream SubscribePumpFunSwapStreamResponse);
+  rpc PumpFunSwap(PumpFunSwapRequest) returns (PumpFunSwapResponse);
+  //Raydium
+  rpc SubscribeRaydiumCreateStream(SubscribeRaydiumCreateStreamRequest) returns (stream SubscribeRaydiumCreateStreamResponse);
+  rpc SubscribeRaydiumSwapStream(SubscribeRaydiumSwapStreamRequest) returns (stream SubscribeRaydiumSwapStreamResponse);
+  rpc RaydiumSwap(RaydiumSwapRequest) returns (RaydiumSwapResponse);
+}
+//common
+message SendTransactionRequest {
+  string transaction = 1;
+  bool skipPreFlight = 2;
+  string openPlatform = 3;//jito|bloxroute|nextblock|temporal
+
+}
+message SendTransactionResponse {
+  string signature = 1;
+}
+
+message SubscribePumpFunCreateStreamRequest {}
+message SubscribePumpFunWithdrawStreamRequest {}
+message SubscribePumpFunSwapStreamRequest {}
+
+message EventMeta {
+  string txHash = 1;
+  int64 slot = 2;
+  int64 blockTime = 3;
+  int64 fee = 4;
+  int64 tip = 5;
+  string tag = 6;
+  int64 balance = 7;
+}
+
+message SubscribePumpFunCreateStreamResponse {
+  EventMeta meta = 1;
+  CreateInfo createInfo = 2;
+}
+message CreateInfo{
+  string name = 1;
+  string symbol = 2;
+  string uri = 3;
+  string mint = 4;
+  string bondingCurve = 5;
+  string creator = 6;
+}
+message SubscribePumpFunWithdrawStreamResponse {
+  EventMeta meta = 1;
+  WithdrawInfo withdrawInfo = 2;
+}
+message WithdrawInfo{
+  string mint = 1;
+  string bondingCurve = 2;
+}
+message SubscribePumpFunSwapStreamResponse {
+  EventMeta meta = 1;
+  PumpFunSwapInfo swapInfo = 2;
+  SwapExtra swapExtra = 3;
+  BalanceExtra balanceExtra = 4;
+}
+message PumpFunSwapInfo{
+  string mint = 1;
+  string bondingCurve = 2;
+  string user = 3;
+  uint64 solAmount = 4;
+  uint64 tokenAmount = 5;
+  bool isBuy = 6;
+  int64 timestamp = 7;
+  uint64 virtualSolReserves = 8;
+  uint64 virtualTokenReserves = 9;
+}
+message SwapExtra{
+  string side = 1;
+  double baseQty = 2;
+  double quoteQty = 3;
+  double price = 4;//priceUSD=price*quoteUSDPrice
+  double liquidity = 5;//liquidityUSD=liquidity*quoteUSDPrice
+  double cap = 6;//capUSD=cap*quoteUSDPrice
+  double quoteUSDPrice = 7;
+}
+message BalanceExtra{
+  uint64 userSolBalance = 1;
+  uint64 userBaseBalance = 2;
+  uint64 poolQuoteBalance = 3;
+  uint64 poolBaseBalance = 4;
+}
+message PumpFunSwapRequest {
+  string user = 1;
+  string bondingCurve = 2;
+  string tokenIn = 3;
+  string tokenOut = 4;
+  string amountIn = 5;
+  string amountOut = 6;
+  bool checkAta = 7;
+  optional Fee fee = 8;
+}
+message PumpFunSwapResponse{
+  string transaction = 1;
+}
+
+//raydium
+message SubscribeRaydiumCreateStreamRequest {}
+message SubscribeRaydiumCreateStreamResponse {
+  EventMeta meta = 1;
+  RaydiumCreateInfo createInfo = 2;
+}
+message RaydiumCreateInfo{
+  string amm = 1;
+  string coinMint = 2;
+  string pcMint = 3;
+  string poolCoinTokenAccount = 4;
+  string poolPcTokenAccount = 5;
+  string user = 6;
+  string baseMint = 7;
+  string quoteMint = 8;
+  int64 openTime = 9;
+  uint64 initPcAmount = 10;
+  uint64 initCoinAmount = 11;
+}
+message SubscribeRaydiumSwapStreamRequest {
+}
+message SubscribeRaydiumSwapStreamResponse {
+  EventMeta meta = 1;
+  RaydiumSwapInfo swapInfo = 2;
+  SwapExtra swapExtra = 3;
+  BalanceExtra balanceExtra = 4;
+}
+message RaydiumSwapInfo{
+  string amm = 1;
+  string poolCoinTokenAccount = 2;
+  string poolPcTokenAccount = 3;
+  string user = 4;
+  string baseMint = 5;
+  string quoteMint = 6;
+  string tokenInMint = 7;
+  int32 tokenInDecimals = 8;
+  string tokenOutMint = 9;
+  int32 tokenOutDecimals = 10;
+  string amountIn = 11;
+  string amountOut = 12;
+}
+message RaydiumSwapRequest {
+  string user = 1;
+  string amm = 2;
+  string poolCoinTokenAccount = 3;
+  string poolPcTokenAccount = 4;
+  string tokenIn = 5;
+  string tokenOut = 6;
+  string amountIn = 7;
+  string amountOut = 8;
+  bool checkAta = 9;
+  optional Fee fee = 10;
+}
+message Fee{
+  optional uint32 computeLimit = 1 ;
+  optional uint64 computePrice = 2 ;
+  optional string tipAccount = 3 ;//jito|bloxroute|nextblock|temporal|(address)
+  optional uint64 tipAmount = 4 ;
+}
+message RaydiumSwapResponse{
+  string transaction = 1;
+}

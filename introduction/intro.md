@@ -1,20 +1,26 @@
-# 快速入门
+# Quick Start
 
-Solana对于交易者简直是一个天堂，上面不仅有大量的流动资金，而且成交速度极快。但由于Solana采用和EVM不同的架构，并且使用Rust合约开发语言，导致大量用户学习成本极高，所以我们推出一套完整的Solana的交易基础设施。通过我们的交易基础设施你可以快速上手Solana的链上交易，同时对于大部分专业交易者来说，速度就是一切，如果你比别人晚400ms，可能会有重大损失。通过我们的交易基础设施获取行情和下单，可以大幅降低延迟，可以为你做出更好的交易决策。
+Solana is a paradise for traders, with abundant liquidity and extremely fast transaction speeds. However, due to Solana's different architecture from EVM and the use of the Rust contract development language, many users face a high learning curve.
 
-## 我们的特点
+Therefore, we have launched a complete trading infrastructure for Solana. With our trading infrastructure, you can quickly get started with on-chain trading on Solana. For most professional traders, speed is everything; if you are 400ms late, it could lead to significant losses.
 
-- 专业的团队：团队成员都是专业的高频交易员、MEV searcher
-- 友好的API：清晰友好的API接口
-- 极低延迟：网关延迟<1ms，上链P95 slot+1
+By using our trading infrastructure to access market data and place orders, you can greatly reduce latency and make better trading decisions.
 
-## 提供服务
+## Our Features
 
-- Solana 免费节点，负载均衡，无限制使用
-- Solana 专用托管节点，延迟<1ms
-- Pumpfun 交易基础设施
-- RaydiumAmm 交易基础设施
-- Solana SWQoS交易快速转发服务（TODO）
-- Solana 有限的内存池服务（TODO）
+Professional Team: Team members are all professional high-frequency traders and MEV searchers.
+Friendly API: Clear and user-friendly API interfaces.
+Ultra-Low Latency: Gateway latency <1ms, on-chain P95 slot +1.
 
-内测期间，全部免费试用，可以联系TG:@greyireland，或者进入官方discord：<https://discord.gg/av6zHtYZ> ，获取APIKey
+## Services Provided
+
+- Free Solana nodes with load balancing and unlimited use.
+- Dedicated Solana hosted nodes with latency <1ms.
+- Pumpfun trading infrastructure.
+- RaydiumAMM trading infrastructure.
+- Solana SWQoS trading fast forwarding service (TODO).
+- Limited memory pool service for Solana (TODO).
+
+## Other
+
+During the internal test period, all services are free to try. You can contact us via TG: @greyireland or join our official Discord: <https://discord.gg/av6zHtYZ> to obtain an API Key.

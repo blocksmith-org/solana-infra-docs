@@ -1,13 +1,12 @@
-# pumpfun quick start
+# pumpfun 快速入门
 
-Pumpfun is a token launch platform where you can discover big opportunities every day. We currently provide a news feed for all events, including: Token Create, Token Swap, Token Withdraw, and Token Migrate.
+pumpfun 是一个token发射平台，你每天都可以从pumpfun从中发现大的机会。我们目前提供所有事件的消息流，包括:Token Create、Token Swap、Token Withdraw、Token Migrate。
+简单流程：
 
-Simple process:
-
-- Users subscribe to the real-time market feed from Blocksmith.
-- Users discover trading opportunities and request Blocksmith to construct the transaction body.
-- Then users sign the returned transaction body with their private key.
-- Finally, users send the signed transaction to Blocksmith for on-chain processing.
+- 用户订阅blocksmith实时行情流
+- 用户发现交易机会，请求blocksmith构建交易体
+- 然后用户通过自己的私钥给返回的交易体签名
+- 最后用户发送签名后的交易给blocksmith进行上链
 
 ## Token Create
 
@@ -42,7 +41,7 @@ message CreateInfo{
 }
 ```
 
-resposne JSON
+resposne JSON序列化
 
 ```json
 {
@@ -83,7 +82,7 @@ message WithdrawInfo{
 }
 ```
 
-resposne JSON
+resposne JSON序列化
 
 ```json
 {
@@ -144,7 +143,7 @@ message BalanceExtra{
 }
 ```
 
-resposne JSON
+resposne JSON序列化
 
 ```json
 {
@@ -206,7 +205,7 @@ message PumpFunSwapResponse{
 }
 ```
 
-request JSON
+request JSON序列化
 
 ```json
 {
@@ -219,7 +218,7 @@ request JSON
 }
 ```
 
-resposne JSON
+resposne JSON序列化
 
 ```json
 {
