@@ -18,8 +18,8 @@ By using our trading infrastructure to access market data and place orders, you 
 - Dedicated Solana hosted nodes with latency <1ms.
 - Pumpfun trading infrastructure.
 - RaydiumAMM trading infrastructure.
-- Solana SWQoS trading fast forwarding service (TODO).
-- Limited mempool service for Solana (TODO).
+- Solana SWQoS trading fast forwarding service (coming soon).
+- Limited mempool service for Solana (coming soon).
 
 ## Other
 
@@ -36,10 +36,10 @@ During the internal test period, all services are free to try. You can contact u
 - [Pumpfun](introduction/pumpfun.md)
 - [RaydiumAmm](introduction/raydium_amm.md)
 
-## Solana validator SWQos service
+## Solana validator SWQos service (coming soon)
 
 - [swqos](advance/swqos.md)
 
-## Solana mempool service
+## Solana mempool service (coming soon)
 
 - [mempool](advance/mempool.md)
