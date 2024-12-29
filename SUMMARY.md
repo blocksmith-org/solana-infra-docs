@@ -10,6 +10,7 @@
 - [Endpoint](introduction/endpoint.md)
 - [Pumpfun](introduction/pumpfun.md)
 - [RaydiumAmm](introduction/raydium_amm.md)
+- [Example](introduction/example.md)
 
 ## Solana validator SWQos service (coming soon)
 
