@@ -25,21 +25,21 @@ By using our trading infrastructure to access market data and place orders, you 
 
 During the internal test period, all services are free to try. You can contact us via TG: @greyireland or join our official Discord: <https://discord.gg/av6zHtYZ> to obtain an API Key.
 
-## solana rpc resouce
+## Solana rpc resouce
 
 - [Resource](introduction/resource.md)
 
-## solana trade infra
+## Solana trade infra
 
 - [Intro](introduction/intro.md)
 - [Endpoint](introduction/endpoint.md)
 - [Pumpfun](introduction/pumpfun.md)
 - [RaydiumAmm](introduction/raydium_amm.md)
 
-## solana validator SWQos service
+## Solana validator SWQos service
 
 - [swqos](advance/swqos.md)
 
-## solana mempool service
+## Solana mempool service
 
 - [mempool](advance/mempool.md)
