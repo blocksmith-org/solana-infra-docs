@@ -2,12 +2,12 @@
 
 ## solana rpc resouce
 
-- [General](introduction/general.md)
+- [Resource](introduction/resource.md)
 
 ## solana trade infra
 
 - [Intro](introduction/intro.md)
-- [General](introduction/general.md)
+- [Endpoint](introduction/endpoint.md)
 - [Pumpfun](introduction/pumpfun.md)
 - [RaydiumAmm](introduction/raydium_amm.md)
 
@@ -17,4 +17,4 @@
 
 ## solana mempool service
 
-- [swqos](advance/mempool.md)
+- [mempool](advance/mempool.md)

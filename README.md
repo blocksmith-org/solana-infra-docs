@@ -8,9 +8,9 @@ By using our trading infrastructure to access market data and place orders, you 
 
 ## Our Features
 
-Professional Team: Team members are all professional high-frequency traders and MEV searchers.
-Friendly API: Clear and user-friendly API interfaces.
-Ultra-Low Latency: Gateway latency <1ms, on-chain P95 slot +1.
+- Professional Team: Team members are all professional high-frequency traders and MEV searchers.
+- Friendly API: Clear and user-friendly API interfaces.
+- Ultra-Low Latency: Gateway latency <1ms, on-chain P95 slot +1.
 
 ## Services Provided
 
@@ -19,7 +19,7 @@ Ultra-Low Latency: Gateway latency <1ms, on-chain P95 slot +1.
 - Pumpfun trading infrastructure.
 - RaydiumAMM trading infrastructure.
 - Solana SWQoS trading fast forwarding service (TODO).
-- Limited memory pool service for Solana (TODO).
+- Limited mempool service for Solana (TODO).
 
 ## Other
 
@@ -27,12 +27,12 @@ During the internal test period, all services are free to try. You can contact u
 
 ## solana rpc resouce
 
-- [General](introduction/general.md)
+- [Resource](introduction/resource.md)
 
 ## solana trade infra
 
 - [Intro](introduction/intro.md)
-- [General](introduction/general.md)
+- [Endpoint](introduction/endpoint.md)
 - [Pumpfun](introduction/pumpfun.md)
 - [RaydiumAmm](introduction/raydium_amm.md)
 
@@ -42,4 +42,4 @@ During the internal test period, all services are free to try. You can contact u
 
 ## solana mempool service
 
-- [swqos](advance/mempool.md)
+- [mempool](advance/mempool.md)
