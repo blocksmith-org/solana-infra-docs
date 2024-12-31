@@ -1,13 +1,13 @@
-# RaydiumAmm quick start
+# RaydiumAmm 快速入门
 
-Raydium AMM is a DEX protocol similar to Uniswap V2, with price calculation logic akin to that of Uniswap V2. Currently, all tokens successfully launched from Pumpfun are adding liquidity to this protocol. We provide market data streams for Raydium AMM, including: Token Create (this event is triggered by pump migration), swap, and Build Swap Tx.
+raydium amm 类似 uniswap v2 的 dex 协议，价格计算的逻辑和 uniswap v2 类似。目前从pumpfun发射成功的token，都是添加流动性到这个协议中。目前我们提供raydium amm 的行情流，包括:Token Create(pump migrate会触发这个事件)、swap、Build Swap Tx。
 
-Simple process:
+简单流程：
 
-- Users subscribe to the real-time market feed from Blocksmith.
-- Users discover trading opportunities and request Blocksmith to construct the transaction body.
-- Then users sign the returned transaction body with their private key.
-- Finally, users send the signed transaction to Blocksmith for on-chain processing.
+- 用户订阅blocksmith实时行情流
+- 用户发现交易机会，请求blocksmith构建交易体
+- 然后用户通过自己的私钥给返回的交易体签名
+- 最后用户发送签名后的交易给blocksmith进行上链
 
 ## Token Create
 

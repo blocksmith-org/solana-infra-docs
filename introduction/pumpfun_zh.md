@@ -1,6 +1,6 @@
 # pumpfun 快速入门
 
-pumpfun 是一个token发射平台，你每天都可以从pumpfun从中发现大的机会。我们目前提供所有事件的消息流，包括:Token Create、Token Swap、Token Withdraw、Token Migrate。
+pumpfun 是一个token发射平台，你每天都可以从pumpfun从中发现大的机会。我们目前提供所有事件的消息流，包括:Token Create、Token Swap、Token Withdraw。
 简单流程：
 
 - 用户订阅blocksmith实时行情流
